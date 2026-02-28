@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; color: #212121; background: #fff; }
+        .container { max-width: 1230px; margin: 0 auto; padding: 0 15px; }
+        img { display: block; width: 100%; height: auto; }
+        a { text-decoration: none; color: inherit; }
+
+        header { border-bottom: 1px solid #ececec; padding: 16px 0; }
+        .header-box { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-weight: 700; font-size: 24px; color: #2196f3; }
+        .logo span { color: #000; }
+        .mob-menu { font-size: 28px; }
+        .nav, .contacts { display: none; }
+
+        .hero { 
+            background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('hero.jpg'), #c4c4c4;
+            background-size: cover; background-position: center;
+            padding: 118px 0; text-align: center; color: #fff;
+        }
+        .hero h1 { font-size: 26px; font-weight: 900; text-transform: uppercase; margin-bottom: 30px; }
+        .btn { background: #2196f3; color: #fff; border: none; padding: 10px 32px; border-radius: 4px; font-weight: 700; cursor: pointer; }
+
+        .section { padding: 60px 0; }
+        .section-title { font-size: 28px; text-align: center; margin-bottom: 30px; }
+
+        .feats { display: grid; gap: 30px; }
+        .f-icon { background: #f5f4fa; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; border-radius: 4px; }
+        .f-item h3 { font-size: 14px; text-transform: uppercase; margin-bottom: 10px; text-align: center; }
+        .f-item p { font-size: 14px; color: #757575; line-height: 1.7; }
+
+        .work { display: none; }
+
+        .team { background: #f5f4fa; }
+        .team-grid { display: grid; gap: 30px; }
+        .t-card { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 0 0 4px 4px; }
+        .t-info { padding: 30px; text-align: center; }
+        .t-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 10px; }
+        .t-info p { color: #757575; }
+
+        .c-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .c-item { height: 90px; border: 1px solid #afb1b8; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #afb1b8; }
+
+        footer { background: #2f303a; padding: 60px 0; color: #fff; text-align: center; }
+        .f-logo { font-size: 24px; color: #2196f3; font-weight: 700; margin-bottom: 20px; display: block; }
+        .f-logo span { color: #fff; }
+        .addr { font-style: normal; font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+        @media (min-width: 768px) {
+            .feats, .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .c-grid { grid-template-columns: repeat(3, 1fr); }
+            .hero h1 { font-size: 38px; }
+        }
+
+        @media (min-width: 1200px) {
+            .section { padding: 94px 0; }
+            .mob-menu { display: none; }
+            .nav { display: flex; gap: 50px; font-weight: 500; font-size: 14px; }
+            .contacts { display: flex; gap: 30px; margin-left: auto; color: #757575; font-size: 14px; }
+            
+            .hero { padding: 200px 0; }
+            .hero h1 { font-size: 44px; }
+            
+            .feats, .team-grid { grid-template-columns: repeat(4, 1fr); }
+            .f-item h3 { text-align: left; }
+            
+            .work { display: block; padding-top: 0; }
+            .w-grid { display: flex; gap: 30px; }
+            .w-item { position: relative; }
+            .w-label { 
+                position: absolute; bottom: 0; width: 100%; background: rgba(47, 48, 58, 0.8); 
+                color: #fff; text-align: center; padding: 27px 0; font-weight: 700; text-transform: uppercase;
+            }
+
+            .c-grid { grid-template-columns: repeat(6, 1fr); }
+            footer { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-box">
+        <a href="#" class="logo">Web<span>Studio</span></a>
+        <div class="mob-menu">☰</div>
+        <nav class="nav">
+            <a href="#" style="color: #2196f3;">Студія</a>
+            <a href="#">Портфоліо</a>
+            <a href="#">Контакти</a>
+        </nav>
+        <div class="contacts">
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a href="tel:+380961111111">+38 096 111 11 11</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>Ефективні рішення для вашого бізнесу</h1>
+            <button class="btn">Замовити послугу</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="feats">
+                <div class="f-item">
+                    <div class="f-icon"><svg width="70" height="70"><path d="M35 15v40M15 35h40" stroke="#000" stroke-width="2"/></svg></div>
+                    <h3>Увага до деталей</h3>
+                    <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+                </div>
+                <div class="f-item">
+                    <div class="f-icon"><svg width="70" height="70"><circle cx="35" cy="35" r="20" stroke="#000" fill="none" stroke-width="2"/></svg></div>
+                    <h3>Пунктуальність</h3>
+                    <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                </div>
+                <div class="f-item">
+                    <div class="f-icon"><svg width="70" height="70"><path d="M20 50V30M35 50V20M50 50V10" stroke="#000" stroke-width="2"/></svg></div>
+                    <h3>Планування</h3>
+                    <p>Так само консультація з широким активом значною мірою зумовлює.</p>
+                </div>
+                <div class="f-item">
+                    <div class="f-icon"><svg width="70" height="70"><circle cx="35" cy="25" r="10" stroke="#000" fill="none" stroke-width="2"/></svg></div>
+                    <h3>Сучасні технології</h3>
+                    <p>Значущість цих проблем настільки очевидна, що реалізація завдань.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section work">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 36px;">Чим ми займаємося</h2>
+            <div class="w-grid">
+                <div class="w-item"><img src="work1.jpg" alt="w1"><div class="w-label">Десктопні додатки</div></div>
+                <div class="w-item"><img src="work2.jpg" alt="w2"><div class="w-label">Мобільні додатки</div></div>
+                <div class="w-item"><img src="work3.jpg" alt="w3"><div class="w-label">Дизайнерські рішення</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section team">
+        <div class="container">
+            <h2 class="section-title">Наша команда</h2>
+            <div class="team-grid">
+                <div class="t-card">
+                    <img src="team1.jpg" alt="1">
+                    <div class="t-info"><h3>Ігор Дем'яненко</h3><p>Product Designer</p></div>
+                </div>
+                <div class="t-card">
+                    <img src="team2.jpg" alt="2">
+                    <div class="t-info"><h3>Ольга Рєпіна</h3><p>Frontend Developer</p></div>
+                </div>
+                <div class="t-card">
+                    <img src="team3.jpg" alt="3">
+                    <div class="t-info"><h3>Микола Тарасов</h3><p>Marketing</p></div>
+                </div>
+                <div class="t-card">
+                    <img src="team4.jpg" alt="4">
+                    <div class="t-info"><h3>Михайло Єрмаков</h3><p>UI Designer</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Постійні клієнти</h2>
+            <div class="c-grid">
+                <div class="c-item">Logo 1</div>
+                <div class="c-item">Logo 2</div>
+                <div class="c-item">Logo 3</div>
+                <div class="c-item">Logo 4</div>
+                <div class="c-item">Logo 5</div>
+                <div class="c-item">Logo 6</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <a href="#" class="f-logo">Web<span>Studio</span></a>
+        <address class="addr">
+            м. Київ, пр-т Лесі Українки, 26<br>
+            info@devstudio.com<br>
+            +38 096 111 11 11
+        </address>
+    </div>
+</footer>
+
+</body>
+</html>
